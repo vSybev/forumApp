@@ -1,0 +1,31 @@
+<ng-container >
+    <div class="container">
+        <div class="headerComent">
+            <div class="leftSide">
+                <h5 class="creator"><strong>{{coment.comentValues.creator}}</strong></h5>
+            </div>
+            <div class="rightSide" >
+                <img src="../../../assets/images/clock.png" class="clockImg">
+                <p> <strong>{{coment.comentValues.date}} #{{index + 1}} </strong></p>
+                <button 
+                    class="imgDelBtn">
+                    <img 
+                        src="../../../assets/images/redBin.png" 
+                        class="delImg" 
+                        (click)='deleteComent(coment.comentKey)'>
+                </button>
+            </div>
+            
+        </div>
+
+        <strong><hr style="color: grey;"></strong>
+
+        <div class="bottom">
+            <div class="redSquareContainer">
+                <div class="redSquare"> {{coment.comentValues.creator[0] | uppercase}} </div>
+            </div>
+
+            <div class="textField" [innerHtml]="sanitizeHtml(coment.comentValues.text)"></div>
+        </div>
+    </div>
+</ng-container>

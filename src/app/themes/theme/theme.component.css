@@ -1,0 +1,88 @@
+.containerForTheme{
+    width: 100%;
+}
+
+.top{
+    width: 100%;
+    height: 100px;
+    background-color: #ffffff;
+    color: #000000;
+    text-align: left;
+    padding: 20px;
+    margin-top: 30px;
+    display: flex;
+    border: 2px solid grey;
+}
+
+.topLeft{
+    width: 83%;
+}
+
+.topRight{
+    width: 17%;
+}
+
+.bottom{
+    width:100%;
+    height: 100px;
+    background-color: #9f7171;
+    color: white;
+    text-align: left;
+    padding: 20px;
+    margin-bottom: 5px;
+    display: flex;
+}
+
+.bottomLeft{
+    width: 95%;
+    font-size: large;
+}
+
+.bottomRight{
+    display: flex;
+    padding-top: 0px;
+    width: 5%;
+}
+
+.bottomRight img{
+    margin-right: 8px;
+}
+
+.information{
+    height: 61px;
+    width: 120px;
+    margin-left: auto;
+    border: 2px solid #972710;
+    font-size: 22px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #972710;
+}
+
+.delete{
+    height: 61px;
+    width: 61px;
+    margin-left: 20px;
+    border: 2.65px solid black;
+    cursor: pointer;
+    background-color: #942414;
+}
+
+.imgBin{
+    height: 32px;
+    width: 32px;
+}
+
+.imgPlus{
+    height: 15px;
+    width: 15px;
+}
+
+.imgComents{
+    height: 22px;
+    width: 22px;;
+}
+
+strong{
+    font-weight: lighter;
+}

@@ -1,0 +1,112 @@
+<div class="underNavbarBtns">
+    <div class="addBtnContainer">
+        <button 
+            type="button"
+            class="btn add" 
+            data-toggle="modal"
+            data-target="#exampleModal"
+            data-whatever="@fat"
+            [ngModel]="searchText"
+            (click)="openModel()">
+            <img 
+              src="../../assets/images/redPlus.png" 
+              class="redPlus">
+            Добави тема 
+        </button>
+    </div>
+    
+
+    <div class="form">
+        <i class="fa fa-search "></i>
+        <input 
+            type="text" 
+            class="form-control form-input searchEl"  
+            placeholder="Търси тема..."
+        >
+        <button 
+            class="btn btn-primary btnSearch"
+            (click)="startSearching()"> 
+            Search 
+        </button>
+        <span class="left-pan"><i class="fa fa-microphone"></i></span>
+    </div>
+</div>
+
+<div>
+    <ng-container *ngFor="let theme of themesForVisualization"> 
+        <app-theme [theme]="theme"></app-theme>
+    </ng-container>
+    
+</div>
+
+
+
+//modal for adding a theme
+
+  <div class="modal" tabindex="-1" role="dialog" id="model1">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 
+            class="modal-title"> 
+            Създайте вашата тема тук: 
+          </h5>
+          <button 
+            type="button" 
+            class="close" 
+            data-dismiss="modal" 
+            aria-label="Close"  
+            (click)="closeModel()">
+            <span 
+              aria-hidden="true">
+              &times;
+            </span>
+          </button>
+        </div>
+        <form #postForm="ngForm" (ngSubmit)="submit(postForm.value)">
+            <div class="form-group">
+                <label 
+                  for="message-text" 
+                  class="col-form-label">
+                  Theme name: 
+                </label>
+                <textarea 
+                  class="form-control" 
+                  id="themeNameInput" 
+                  required 
+                  name="name"
+                  [(ngModel)] = "themeName">
+                </textarea>
+            </div>
+            <div class="form-group">
+                <label 
+                  for="message-text" 
+                  class="col-form-label">
+                  Theme creater: 
+                </label>
+                <textarea 
+                  class="form-control" 
+                  id="creatorInput" 
+                  required 
+                  name="creator"
+                  [(ngModel)] = "creatorOfTheme" >
+                </textarea>
+            </div>
+            <div class="modal-footer">
+              <button 
+                type="submit" 
+                class="btn submit"> 
+                Създай тема 
+              </button>
+              <button 
+                type="button" 
+                class="btn close" 
+                data-dismiss="modal" 
+                (click)="closeModel()"> 
+                Затвори 
+              </button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>

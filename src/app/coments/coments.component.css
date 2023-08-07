@@ -1,0 +1,157 @@
+html{
+    scroll-behavior: smooth;
+}
+
+.headerContainer{
+    height: 100px;
+    width: 100%;
+    background-color: #9b7373;
+    color: white;
+    display: flex;
+}
+
+.container{
+    margin-top: 50px;
+    overflow-x: auto; 
+    overflow-y: auto;
+}
+
+.leftSide{
+    padding-top: 30px;
+    padding-left: 30px;
+    width: 50%;
+}
+
+.rightSide{
+    /* margin-right: auto; */
+    text-align: right;
+    position: relative;
+    margin-left: 50%;
+    padding-top: 20px;
+    padding-right: 20px;
+    width: 50%;
+}
+
+.submitBtn{
+    width: 130px;
+    height: 40px;
+    background-color: #972710;
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-left: 69.5%;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+.toThemesBtn{
+    height: 40px;
+    width: 80px;
+    margin-bottom: 50px;
+    margin-left: 0px;
+    margin-right: 10px;    
+    cursor: pointer;
+    color: #9b7373;
+    background-color: transparent;
+    border: 2px solid #9b7373;
+}
+
+.answer{
+    height: 40px;
+    width: 120px;
+    color: #9b7373;
+    background-color: transparent;
+    border: 2px solid #9b7373;
+}
+
+.sendArrow{
+    height: 25px;
+    width: 25px;
+}
+
+.clock{
+    height: 18px;
+    width: 18px;
+    margin-right: 7px;
+    margin-bottom: 2px;
+}
+
+.leadToTopBtn{
+    height: 65px;
+    width: 65px;
+    background-color: #333b42;
+    color: #d7d7d6;
+    margin-bottom: 30px;
+    border-radius: 50%;
+    margin-left: 105.5%;
+    
+}
+
+.upArrow{
+    height: 70%;
+    width: 90%;
+}
+
+
+
+.nameField:focus{
+    border: 3px solid #555;
+}
+
+.backBtn{
+    height: 40px;
+    width: 40px;
+    margin-right: 0%;
+    background-color: #afaaaa;
+    color: black;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.backImg, .forwardImg{
+    height: 20px;
+    width: 20px;
+}
+
+.forwardBtn{
+    height: 40px;
+    width: 40px;
+    margin-right: 0%;
+    background-color: transparent;
+    color: black;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.btnsDiv{
+    display: flex;
+}
+
+.containerBtns{
+    display: flex;
+    margin-top: 50px;
+}
+
+.pagesContainer{
+    color: white;
+    display: flex;
+    position: sticky;
+    margin-bottom: 50px;
+    right: 0;
+    margin-left: 90%;
+}
+
+.pagesDiv2{
+    color: white;
+    display: flex;
+    position: sticky;
+    right: 0;
+    margin-left: 78%;
+}
+
+mat-button-toggle-group {
+    height: 40px;
+    text-align: center;
+    border-radius: 0%;
+}

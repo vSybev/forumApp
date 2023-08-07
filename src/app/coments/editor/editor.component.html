@@ -1,0 +1,40 @@
+<div class="editorContainer">
+    <form [formGroup]="editorForm" #postForm="ngForm" (ngSubmit)="onSubmitComent(postForm.value)">
+        <h2 class="textAboveEditor"> Как се казвате? </h2>
+        <input type="text"
+            name="creator" 
+            class="nameField" 
+            minlength="3" 
+            maxlength="15" 
+            id="creator"
+            formControlName="creator"
+            placeholder="Напишете своето име тук.."
+        >
+        <!-- [(ngModel)]="creator"  -->
+        <!-- #nameField="ngModel"  -->
+        <!-- <span *ngIf="creator?.length && !nameField.valid" class="text-danger">Op greshka</span> -->
+
+        <h2 class="textAboveEditor"> Добавяне на мнение: </h2>
+        <p-editor 
+            name="text"
+            type="text" 
+            [style]="{'height':'400px'}" 
+            class="textEditor" 
+            id="textField"
+            minlength="3"
+            formControlName="text"
+            placeholder="Напишете своето мнение тук..">
+        </p-editor>
+        <!-- [(ngModel)]="text" -->
+        <!-- [ngModelOptions]="{standalone: true}" -->
+
+        <button 
+            type="submit" id="editor" 
+            class="btn btn-success submitBtn" 
+            [disabled]="!editorForm.valid">
+            <img src="../../assets/images/sendArrow.png" class="sendArrow"> 
+            Публикувай 
+        </button>
+        <!-- [disabled]="!nameField.valid || !text?.length || text.length > 2500000">  -->
+    </form>
+</div>  

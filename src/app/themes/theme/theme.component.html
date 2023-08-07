@@ -1,0 +1,61 @@
+
+<div class="containerForTheme">
+    <div class="top">
+        <h2 class="topLeft">{{theme.themeValues.header}}</h2>
+        <div class="topRight">
+            <button 
+                class="btn btn-outline-light information" 
+                (click)="openDetails(theme.themeKey)"> 
+                Преглед 
+            </button>
+            <button 
+                class="btn delete" 
+                (click)="confirm1()">
+                <img src="../../../assets/images/bin.png" class="imgBin">
+            </button>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="bottomLeft">
+            <h5>
+                <img src="../../../assets/images/plus.png" class="imgPlus"> 
+                Създадено от: {{theme.themeValues.creator}} 
+                <strong> на: {{theme.themeValues.date}}</strong> 
+            </h5>
+            <h5>
+                <img src="../../../assets/images/arrow.png" class="imgPlus">  
+                Последен коментар:  {{theme.themeValues.lastComent}}
+            </h5>
+        </div>
+        <div class="bottomRight">
+            <img src="../../../assets/images/chat.png" class="imgComents"><p> {{theme.themeValues.numberOfComents}} </p>
+        </div>
+    </div>
+    <br>
+</div>
+
+<div class="card flex justify-content-center">
+    <p-toast></p-toast>
+    <p-confirmDialog #cd [style]="{width: '50vw'}">
+        <ng-template pTemplate="header">
+            <h3>Header Content</h3>
+        </ng-template>
+        <ng-template pTemplate="footer">
+            <button 
+                type="button" 
+                pButton 
+                icon="pi pi-times" 
+                label="No" 
+                (click)="cd.reject()">
+            </button>
+            <button 
+                type="button" 
+                pButton 
+                icon="pi pi-check" 
+                label="Yes" 
+                (click)="cd.accept(); 
+                onDelete(theme.themeKey)">
+            </button>
+        </ng-template>
+    </p-confirmDialog>
+</div>
